@@ -14,7 +14,7 @@ print("\n Press Any Key ")
 input()
 
 # Getting Username
-print("{a:25}:- ".format(a=" Enter Your User Name "), end="")
+print("{a:25}:- ".format(a = " Enter Your User Name "),end="")
 username = input()
 
 # Detrmining Host service
