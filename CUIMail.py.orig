@@ -38,14 +38,14 @@ password = getpass.getpass()
 
 # Login Phase
 try:
-    server.login(username, password)  # login(username,password)
+    server.login(username,password) # login(username,password)
 except:
     print(" Authentication Error !!!")
     print(" Make Sure you Have Enabled Acesse to Less Secure App ")
     exit(1)
 
 # Getting Reciver's e-mail addresse
-print("\n\n Enter Reciver's E-mail Addresse :- ", end='')
+print("\n\n Enter Reciver's E-mail Addresse :- ",end='')
 reciever = input()
 
 print("\n\n")
@@ -55,14 +55,14 @@ msg = MIMEMultipart()
 msg['From'] = username
 msg['To'] = reciever
 
-print(" {s:20} :- ".format(s=" Enter Subject"), end='')
+print(" {s:20} :- ".format(s=" Enter Subject"),end='')
 subject = input()
 msg['Subject'] = subject
 
-print(" {m:20} :- ".format(m=" Enter Your Message"), end='')
+print(" {m:20} :- ".format(m=" Enter Your Message"),end='')
 message = input()
 
-msg.attach(MIMEText(message, 'plain'))
+msg.attach(MIMEText(message,'plain'))
 
 text = msg.as_string()
 
@@ -76,13 +76,12 @@ Subject :- {s}
 
 Body    :- {b}
 -------------------------------------------------
-""".format(r=reciever, f=username, s=subject, b=message))
+""".format(r=reciever,f=username,s=subject,b=message))
 while True:
     choice = input(" Press Y to Send or N to Discard ")
     if choice == 'Y':
         try:
-            # sendmail(from,to,message)
-            server.sendmail(username, reciever, text)
+            server.sendmail(username, reciever, text)  # sendmail(from,to,message)
         except:
             print(" Error Unable To Send Mail Sorry !!! ")
             exit(3)
@@ -91,6 +90,14 @@ while True:
         exit(4)
     elif choice == 'N':
         print(" Message Discarded !!!")
-        break
+        break;
     else:
         print(" Wrong choice !!!")
+#
+# try:
+#   server.sendmail(username,reciever,text) # sendmail(from,to,message)
+# except:
+#   print(" Error Unable To Send Mail Sorry !!! ")
+#   exit(3)
+# print(" Mail Sent ....")
+# server.quit()
