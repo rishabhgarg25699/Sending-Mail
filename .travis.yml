@@ -1,8 +1,4 @@
-language: generic
-addons:
-  apt:
-    sources: debian-sid
-    packages: file
-script:
-  - file --version || true
-  - find . -not \( -path ./.git -prune \) -type f -exec file -N {} + > file.list
+language: python
+python:
+  - 3.4.4
+  - 3.5
