@@ -1,4 +1,4 @@
-Sending-Mail Python Project
+                SENDING MAIL PYTHON PROJECT
 
 It is a python file which sends mail from sender to receiver by only command line interface .
 
@@ -7,5 +7,4 @@ https://travis-ci.org/rishabhgarg25699/Sending-Mail/builds/430958912?utm_source=
 
 STATUS: Green
 
-BEARS USED
-SpaceConsistencyBear,PEP8Bear
+BEARS USED: SpaceConsistencyBear,PEP8Bear
