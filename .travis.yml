@@ -8,5 +8,6 @@ install:
 
 script:
   - echo "skipping tests"
+  - coala --help
   - coala --non-interactive 
   
