@@ -3,10 +3,6 @@ python:
   - "3.6"
 
 install:
-  - pip install getpass
-  - pip install smtplib
-  - pip install MIMEText
-  - pip install MIMEMultipart
   - pip install coala
   - pip install coala-bears
 
