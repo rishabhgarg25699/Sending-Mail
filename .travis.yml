@@ -4,7 +4,7 @@ script:
   - touch .gitignore
   - >
     docker run --volume=$(pwd):/app --workdir=/app coala/base:0.9 /bin/bash -c
-    "coala-quickstart --ci;
+    "coala --ci;
     printf '# Quickstart generated .coafile: ';
     cat .coafile | curl -F 'clbin=<-' https://clbin.com 2>/dev/null;
     cat .coafile;
